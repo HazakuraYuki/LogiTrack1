@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LogiTrack - Kirim Antar Kota, Lacak Tanpa Akun, Terima Dengan Kode</title>
+<!-- Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "error": "#ffb4ab",
+            "surface-container": "#191f31",
+            "on-primary-fixed-variant": "#005048",
+            "inverse-surface": "#dce1fb",
+            "on-error-container": "#ffdad6",
+            "on-primary-fixed": "#00201c",
+            "surface": "#0c1324",
+            "on-tertiary": "#472a00",
+            "surface-dim": "#0c1324",
+            "error-container": "#93000a",
+            "secondary": "#7bd0ff",
+            "on-tertiary-container": "#543300",
+            "inverse-on-surface": "#2a3043",
+            "on-primary-container": "#00423b",
+            "tertiary-container": "#e49200",
+            "on-tertiary-fixed": "#2a1700",
+            "tertiary": "#ffb95f",
+            "surface-container-low": "#151b2d",
+            "primary-fixed-dim": "#4fdbc8",
+            "inverse-primary": "#006b5f",
+            "on-secondary-fixed": "#001e2c",
+            "tertiary-fixed-dim": "#ffb95f",
+            "outline-variant": "#3c4947",
+            "tertiary-fixed": "#ffddb8",
+            "secondary-container": "#00a6e0",
+            "background": "#0c1324",
+            "secondary-fixed": "#c4e7ff",
+            "surface-variant": "#2e3447",
+            "primary": "#4fdbc8",
+            "on-secondary": "#00354a",
+            "on-tertiary-fixed-variant": "#653e00",
+            "on-primary": "#003731",
+            "surface-container-high": "#23293c",
+            "surface-container-lowest": "#070d1f",
+            "on-surface": "#dce1fb",
+            "primary-fixed": "#71f8e4",
+            "on-background": "#dce1fb",
+            "primary-container": "#14b8a6",
+            "on-secondary-container": "#00374d",
+            "surface-bright": "#33394c",
+            "on-error": "#690005",
+            "surface-container-highest": "#2e3447",
+            "secondary-fixed-dim": "#7bd0ff",
+            "on-secondary-fixed-variant": "#004c69",
+            "outline": "#859490",
+            "on-surface-variant": "#bbcac6",
+            "surface-tint": "#4fdbc8"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "gutter-mobile": "1rem",
+            "margin": "2rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "margin-mobile": "1rem",
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "headline-xl": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "title-md": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "title-sm": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "label-code": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "title-sm": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "800" }],
+            "label-code": ["13px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-surface-container-lowest text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col justify-between">
+<!-- TOP NAVIGATION BAR (Shared Anchor Component adapted for Top Level Landing) -->
+<header class="sticky top-0 z-50 w-full bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/30">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin py-space-sm flex items-center justify-between">
+<!-- Brand Logo -->
+<a class="flex items-center gap-space-sm group" href="#">
+<div class="w-10 h-10 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-all">
+<span class="material-symbols-outlined text-2xl" data-icon="local_shipping" data-weight="fill" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+</div>
+<span class="font-headline-md text-headline-md font-extrabold text-primary tracking-tight">LogiTrack</span>
+</a>
+<!-- Desktop Nav Links -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-on-surface font-title-sm text-title-sm transition-colors" href="#cek-ongkir">Cek Ongkir</a>
+<a class="text-primary font-title-sm text-title-sm border-b-2 border-primary pb-1" href="#lacak">Lacak</a>
+<a class="text-on-surface-variant hover:text-on-surface font-title-sm text-title-sm transition-colors" href="#layanan">Layanan</a>
+<a class="text-on-surface-variant hover:text-on-surface font-title-sm text-title-sm transition-colors" href="#tentang">Tentang</a>
+</nav>
+<!-- Trailing Action Buttons -->
+<div class="flex items-center gap-space-sm">
+<button class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-xl border border-outline-variant/40 text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-all active:scale-[0.99]" type="button">
+          Masuk
+        </button>
+<button class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-primary-container text-on-primary-container font-label-lg text-label-lg hover:bg-primary transition-all active:scale-[0.99] shadow-sm" type="button">
+          Daftar Gratis
+        </button>
+</div>
+</div>
+</header>
+<!-- MAIN CANVAS -->
+<main class="flex-1 w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin py-space-lg md:py-space-xl space-y-16 md:space-y-24">
+<!-- HERO SECTION -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+<!-- Sisi Kiri: Headline & Penjelasan -->
+<div class="lg:col-span-6 space-y-6 md:space-y-8 pt-2 lg:pt-6">
+<!-- Badge / Tagline -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary">
+<span class="material-symbols-outlined text-base" data-icon="verified_user" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-label-md text-label-md font-semibold tracking-wide">Logistik Kargo Darat Terpercaya</span>
+</div>
+<!-- Headline Utama -->
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface leading-tight">
+          Kirim antar kota. Lacak tanpa akun. <span class="text-primary underline decoration-primary/40 decoration-4 underline-offset-8">Terima dengan kode.</span>
+</h1>
+<!-- Subheadline -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          Pengiriman kargo darat antar kota di Indonesia dengan privasi terlindungi dan jaminan serah terima aman. Paket baru berstatus Terkirim setelah kode 10 karakter divalidasi.
+        </p>
+<!-- Trust Badges & Stats Ringkas -->
+<div class="grid grid-cols-3 gap-3 md:gap-4 pt-2 border-t border-outline-variant/30">
+<div class="p-3 md:p-4 rounded-xl bg-surface-container-low border border-outline-variant/20">
+<div class="font-headline-sm text-headline-sm font-bold text-primary">38</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Provinsi di Indonesia</div>
+</div>
+<div class="p-3 md:p-4 rounded-xl bg-surface-container-low border border-outline-variant/20">
+<div class="font-headline-sm text-headline-sm font-bold text-secondary">100%</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Kode Rahasia</div>
+</div>
+<div class="p-3 md:p-4 rounded-xl bg-surface-container-low border border-outline-variant/20">
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">0</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Data Pribadi Publik</div>
+</div>
+</div>
+<!-- Live Chain of Custody Chip Anchor -->
+<div class="p-4 rounded-xl bg-surface-container-low/70 border border-primary/30 flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg" data-icon="lock_open">lock_open</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Protokol Penyerahan Kargo</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Validasi fisik wajib oleh agen transit</p>
+</div>
+</div>
+<span class="font-label-code text-label-code px-2.5 py-1 rounded bg-surface-container-lowest text-primary border border-primary/30">
+            KODE: 4A89-91X-JK
+          </span>
+</div>
+</div>
+<!-- Sisi Kanan: Kartu Interaktif Berdampingan / Berurutan -->
+<div class="lg:col-span-6 space-y-6">
+<!-- Kartu 1: Cek Ongkir (Simulasi) -->
+<div class="p-6 md:p-7 rounded-2xl bg-surface-container-low border border-outline-variant/30 relative overflow-hidden shadow-2xl" id="cek-ongkir">
+<div class="flex items-center justify-between mb-5">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="calculate">calculate</span>
+<h2 class="font-title-md text-title-md font-bold text-on-surface">Cek Ongkir (Simulasi)</h2>
+</div>
+<span class="text-xs px-2.5 py-0.5 rounded-full bg-secondary/10 text-secondary border border-secondary/30 font-medium">Tarif Kargo Darat</span>
+</div>
+<form class="space-y-4" onsubmit="event.preventDefault(); document.getElementById('calc-result').classList.remove('hidden');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Kota Asal -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md text-on-surface-variant" for="origin-city">Kota Asal</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-outline text-lg" data-icon="trip_origin">trip_origin</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/40 rounded-xl pl-9 pr-3 py-2.5 text-on-surface font-body-md text-body-md placeholder-outline focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all" id="origin-city" placeholder="Contoh: Jakarta" type="text" value="DKI Jakarta"/>
+</div>
+</div>
+<!-- Kota Tujuan -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md text-on-surface-variant" for="destination-city">Kota Tujuan</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-primary text-lg" data-icon="location_on">location_on</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/40 rounded-xl pl-9 pr-3 py-2.5 text-on-surface font-body-md text-body-md placeholder-outline focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all" id="destination-city" placeholder="Contoh: Surabaya" type="text" value="Surabaya"/>
+</div>
+</div>
+</div>
+<!-- Berat (kg) & Stepper -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md text-on-surface-variant" for="weight-input">Berat Muatan (Kilogram)</label>
+<div class="flex items-center gap-3">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-3 text-outline text-lg" data-icon="scale">scale</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/40 rounded-xl pl-9 pr-3 py-2.5 text-on-surface font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all" id="weight-input" min="5" type="number" value="25"/>
+</div>
+<div class="flex items-center bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-1">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" onclick="const el = document.getElementById('weight-input'); if(parseInt(el.value)&gt;5) el.value = parseInt(el.value)-5;" type="button">
+<span class="material-symbols-outlined text-sm" data-icon="remove">remove</span>
+</button>
+<span class="px-2 text-xs font-semibold text-outline">KG</span>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" onclick="const el = document.getElementById('weight-input'); el.value = parseInt(el.value)+5;" type="button">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Calculated result chip preview -->
+<div class="p-3 rounded-xl bg-surface-container-high/60 border border-outline-variant/30 flex items-center justify-between" id="calc-result">
+<div>
+<span class="text-xs text-on-surface-variant">Estimasi Reguler (2-3 Hari):</span>
+<div class="font-headline-sm text-headline-sm font-bold text-primary">Rp 185.000</div>
+</div>
+<span class="text-xs font-medium text-on-surface-variant">Min. kargo 5 kg</span>
+</div>
+<!-- Tombol Hitung Ongkir -->
+<button class="w-full py-3 px-4 rounded-xl bg-primary-container text-on-primary-container font-label-lg text-label-lg font-semibold hover:bg-primary transition-all active:scale-[0.99] flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-lg" data-icon="search">search</span>
+<span>Hitung Ongkir</span>
+</button>
+</form>
+</div>
+<!-- Kartu 2: Lacak Resi -->
+<div class="p-6 md:p-7 rounded-2xl bg-surface-container-low border border-outline-variant/30 relative overflow-hidden shadow-2xl" id="lacak">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-xl" data-icon="qr_code_scanner">qr_code_scanner</span>
+<h2 class="font-title-md text-title-md font-bold text-on-surface">Lacak Resi</h2>
+</div>
+<span class="flex items-center gap-1.5 text-xs text-primary font-medium">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+              Sistem Aktif
+            </span>
+</div>
+<form class="space-y-4" onsubmit="event.preventDefault(); document.getElementById('tracking-modal').classList.remove('hidden');">
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md text-on-surface-variant" for="tracking-code-input">Nomor Resi LogiTrack</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-outline text-lg" data-icon="pin">pin</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/40 rounded-xl pl-9 pr-3 py-2.5 text-on-surface font-label-code text-label-code tracking-wider focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all uppercase" id="tracking-code-input" placeholder="LGT-20261019-2045" type="text" value="LGT-20261019-2045"/>
+</div>
+</div>
+<!-- Info Privasi Penjelasan -->
+<div class="flex items-start gap-2.5 p-3 rounded-xl bg-surface-container-lowest/60 border border-outline-variant/20">
+<span class="material-symbols-outlined text-secondary text-base shrink-0 mt-0.5" data-icon="security">security</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Privasi terjaga: tanpa nama penerima atau alamat jalan
+              </p>
+</div>
+<!-- Tombol Lacak -->
+<button class="w-full py-3 px-4 rounded-xl bg-primary-container text-on-primary-container font-label-lg text-label-lg font-semibold hover:bg-primary transition-all active:scale-[0.99] flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-lg" data-icon="radar">radar</span>
+<span>Lacak</span>
+</button>
+</form>
+<!-- Micro Waybill Live Preview snippet -->
+<div class="mt-4 pt-4 border-t border-outline-variant/30 space-y-3" id="tracking-modal">
+<div class="flex items-center justify-between text-xs">
+<span class="text-on-surface-variant">Armada: <span class="font-semibold text-on-surface">B 9841 TXZ</span></span>
+<span class="px-2 py-0.5 rounded-full bg-secondary/10 text-secondary border border-secondary/30">Dalam Perjalanan</span>
+</div>
+<div class="flex items-center justify-between text-xs font-label-code text-primary">
+<span>JAKARTA (DC CAKUNG)</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+<span>SURABAYA (DC RUNGKUT)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FEATURE SECTION (Below Hero) -->
+<section class="space-y-8" id="layanan">
+<div class="text-center max-w-2xl mx-auto space-y-3">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-on-surface">
+          Keamanan &amp; Ketepatan Jalur Kargo
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Infrastruktur digital ekspedisi logistik yang menghilangkan kecemasan paket tertukar atau kebocoran privasi pelanggan.
+        </p>
+</div>
+<!-- 3 Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Kartu 1: Resi anti-kembar -->
+<div class="p-6 md:p-8 rounded-2xl bg-surface-container-low border border-outline-variant/30 hover:border-primary/40 transition-all group flex flex-col justify-between">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl" data-icon="barcode_scanner">barcode_scanner</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Resi anti-kembar</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Penjelasan sistem penomoran unik LGT-YYYYMMDD-NNNN yang tersentralisasi dan mencegah duplikasi atau pemalsuan kargo di seluruh terminal transit Indonesia.
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-outline-variant/20 flex items-center gap-2 text-xs font-label-code text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+<span>FORMAT: LGT-20261019-XXXX</span>
+</div>
+</div>
+<!-- Kartu 2: Pelacakan tanpa data pribadi -->
+<div class="p-6 md:p-8 rounded-2xl bg-surface-container-low border border-outline-variant/30 hover:border-secondary/40 transition-all group flex flex-col justify-between">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl" data-icon="visibility_off">visibility_off</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Pelacakan tanpa data pribadi</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Pelacakan publik hanya menampilkan kota asal, kota tujuan, peta rute, dan linimasa checkpoint tanpa mengekspos nomor telepon atau alamat jalan pengirim dan penerima.
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-outline-variant/20 flex items-center gap-2 text-xs font-label-code text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="lock">lock</span>
+<span>END-TO-END METADATA SHIELD</span>
+</div>
+</div>
+<!-- Kartu 3: Kode konfirmasi 10 karakter -->
+<div class="p-6 md:p-8 rounded-2xl bg-surface-container-low border border-outline-variant/30 hover:border-primary/40 transition-all group flex flex-col justify-between">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl" data-icon="key">key</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Kode konfirmasi 10 karakter</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Paket berstatus "Terkirim" hanya jika penerima fisik menyerahkan 10 karakter kode verifikasi rahasia kepada kurir saat serah terima di titik tujuan.
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-outline-variant/20 flex items-center gap-2 text-xs font-label-code text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="verified">verified</span>
+<span>STATUS: TERVERIFIKASI FISIK</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION TENTANG (Subtle info block) -->
+<section class="rounded-2xl bg-surface-container-low border border-outline-variant/30 p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6" id="tentang">
+<div class="space-y-2 max-w-2xl">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Tentang LogiTrack Nusantara</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Mengintegrasikan armada truk fuso, CDD, dan kontainer antar-pulau dengan sinkronisasi GPS real-time serta otentikasi serah terima berbasis kode acak terenkripsi.
+        </p>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<button class="px-5 py-2.5 rounded-xl border border-outline-variant/40 text-on-surface hover:bg-surface-container-high transition-all text-sm font-semibold" type="button">
+          Pelajari Protokol
+        </button>
+<button class="px-5 py-2.5 rounded-xl bg-primary-container text-on-primary-container hover:bg-primary transition-all text-sm font-semibold" type="button">
+          Hubungi Dispatcher
+        </button>
+</div>
+</section>
+</main>
+<!-- FOOTER (Follows exact structural blueprint and requirement) -->
+<footer class="w-full border-t border-outline-variant/30 bg-surface-container-lowest mt-16">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin py-space-xl flex flex-col md:flex-row justify-between items-center gap-space-md text-center md:text-left">
+<!-- Logo and Copyright -->
+<div class="space-y-1">
+<div class="flex items-center justify-center md:justify-start gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="local_shipping">local_shipping</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">LogiTrack</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          © 2025 LogiTrack Indonesia. Jaringan Ekspedisi Kargo Darat Terpercaya. Hak Cipta Dilindungi.
+        </p>
+</div>
+<!-- Menu Tautan Footer: "Bantuan", "Syarat dan Privasi" -->
+<div class="flex items-center gap-6">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:text-primary transition-colors" href="#">Bantuan</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:text-primary transition-colors" href="#">Syarat dan Privasi</a>
+</div>
+</div>
+</footer>
+</body></html>

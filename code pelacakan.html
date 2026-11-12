@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pelacakan Kargo LGT-20261019-2045 - LogiTrack Indonesia</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-fixed": "#00201c",
+            "primary": "#4fdbc8",
+            "surface-container": "#191f31",
+            "on-secondary-container": "#00374d",
+            "error": "#ffb4ab",
+            "tertiary": "#ffb95f",
+            "secondary": "#7bd0ff",
+            "outline": "#859490",
+            "on-primary": "#003731",
+            "on-secondary-fixed": "#001e2c",
+            "surface-tint": "#4fdbc8",
+            "surface-container-high": "#23293c",
+            "on-tertiary-fixed-variant": "#653e00",
+            "secondary-fixed": "#c4e7ff",
+            "on-surface": "#dce1fb",
+            "primary-fixed": "#71f8e4",
+            "surface-bright": "#33394c",
+            "on-primary-fixed-variant": "#005048",
+            "secondary-container": "#00a6e0",
+            "on-background": "#dce1fb",
+            "surface-container-highest": "#2e3447",
+            "primary-container": "#14b8a6",
+            "on-error-container": "#ffdad6",
+            "secondary-fixed-dim": "#7bd0ff",
+            "on-tertiary-container": "#543300",
+            "inverse-surface": "#dce1fb",
+            "on-tertiary-fixed": "#2a1700",
+            "error-container": "#93000a",
+            "outline-variant": "#3c4947",
+            "surface-container-lowest": "#070d1f",
+            "surface-variant": "#2e3447",
+            "surface-container-low": "#151b2d",
+            "tertiary-fixed-dim": "#ffb95f",
+            "inverse-primary": "#006b5f",
+            "tertiary-container": "#e49200",
+            "on-error": "#690005",
+            "on-secondary": "#00354a",
+            "primary-fixed-dim": "#4fdbc8",
+            "on-surface-variant": "#bbcac6",
+            "tertiary-fixed": "#ffddb8",
+            "inverse-on-surface": "#2a3043",
+            "on-primary-container": "#00423b",
+            "on-tertiary": "#472a00",
+            "surface-dim": "#0c1324",
+            "on-secondary-fixed-variant": "#004c69",
+            "surface": "#0c1324",
+            "background": "#0c1324"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "2rem",
+            "space-xs": "0.25rem",
+            "space-xl": "2rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "gutter-mobile": "1rem",
+            "margin-mobile": "1rem",
+            "gutter": "1.5rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "title-md": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "label-code": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "title-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "800" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-code": ["13px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "title-sm": ["14px", { "lineHeight": "20px", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-surface-container-lowest text-on-surface antialiased min-h-screen flex flex-col font-body-md selection:bg-primary-container selection:text-on-primary-fixed">
+<!-- TopNavBar (Shared Component) -->
+<header class="sticky top-0 z-50 flex items-center justify-between w-full px-margin py-space-sm max-w-[1440px] mx-auto bg-surface-container-lowest border-b border-outline-variant/30">
+<div class="flex items-center gap-space-lg">
+<a class="flex items-center gap-space-sm group" href="#">
+<span class="material-symbols-outlined text-primary text-3xl transition-transform group-hover:scale-105" data-icon="local_shipping">local_shipping</span>
+<span class="font-headline-md text-headline-md font-extrabold text-primary tracking-tight">LogiTrack</span>
+</a>
+<!-- Primary Nav Cluster (Pelacakan as active intent) -->
+<nav class="hidden md:flex items-center gap-6 ml-4">
+<a class="text-primary border-b-2 border-primary pb-1 font-title-sm text-title-sm flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="travel_explore">travel_explore</span>
+          Pelacakan
+        </a>
+<a class="text-on-surface-variant hover:text-on-surface pb-1 font-title-sm text-title-sm transition-colors" href="#">
+          Kirim Kargo
+        </a>
+<a class="text-on-surface-variant hover:text-on-surface pb-1 font-title-sm text-title-sm transition-colors" href="#">
+          Rute &amp; Tarif
+        </a>
+<a class="text-on-surface-variant hover:text-on-surface pb-1 font-title-sm text-title-sm transition-colors" href="#">
+          Serah Terima
+        </a>
+<a class="text-on-surface-variant hover:text-on-surface pb-1 font-title-sm text-title-sm transition-colors" href="#">
+          LogiPoin
+        </a>
+</nav>
+</div>
+<!-- Trailing Icon Actions & Primary Trailing Auth Action -->
+<div class="flex items-center gap-space-sm">
+<button aria-label="Notifikasi" class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container-high rounded-xl transition-all relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full ring-2 ring-surface-container-lowest"></span>
+</button>
+<button aria-label="Protokol Keamanan" class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container-high rounded-xl transition-all">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+</button>
+<div class="h-6 w-[1px] bg-outline-variant/40 mx-1 hidden sm:block"></div>
+<button class="hidden sm:inline-flex items-center justify-center font-label-lg text-label-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface px-4 py-2 rounded-xl transition-all border border-outline-variant/50 active:scale-[0.99]">
+        Masuk / Daftar
+      </button>
+</div>
+</header>
+<!-- Main Tracking Canvas -->
+<main class="flex-1 w-full max-w-[1440px] mx-auto px-margin py-space-md">
+<!-- Top Breadcrumb & Status Quick Action -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]" data-icon="home">home</span>
+          Dashboard Ekspedisi
+        </a>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+<span class="text-on-surface">Pelacakan Aktif</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+<span class="font-label-code text-label-code text-primary">LGT-20261019-2045</span>
+</div>
+<!-- Verified Security Protocol Pill -->
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container border border-outline-variant/40 text-on-surface-variant font-label-md text-label-md">
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>Sistem Telemetri Koridor Jawa Terhubung (GNSS Live)</span>
+</div>
+</div>
+<!-- Shipment Overview Header Section -->
+<section class="bg-surface-container-low border border-outline-variant/40 rounded-2xl p-space-lg mb-space-lg shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md border-b border-outline-variant/25 pb-space-lg mb-space-lg">
+<!-- Left: Waybill & Privacy Shield -->
+<div class="space-y-2">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">No. Resi Kargo Darat</span>
+<!-- Mandatory Privacy Shield Badge -->
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-surface-container-highest border border-outline-variant/50 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]" data-icon="shield">shield</span>
+<span>Data pribadi disembunyikan</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-md">
+<h1 class="font-label-code text-2xl md:text-3xl font-extrabold text-on-surface tracking-wider">
+              LGT-20261019-2045
+            </h1>
+<!-- Status Badge: Dalam Perjalanan -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-primary-container/15 text-primary border border-primary-container/30 font-label-lg text-label-lg font-bold">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+</span>
+              Dalam Perjalanan
+            </div>
+</div>
+</div>
+<!-- Right: Transit Hub & Fleet Spec (Strict Privacy: City Hubs & Fleet ID Only) -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-md bg-surface-container-lowest/80 border border-outline-variant/30 rounded-xl p-space-md">
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant">Rute Kargo</p>
+<p class="font-title-sm text-title-sm text-on-surface font-bold flex items-center gap-1.5 mt-0.5">
+<span>Semarang</span>
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="trending_flat">trending_flat</span>
+<span>Surabaya</span>
+</p>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant">Armada Bertugas</p>
+<p class="font-label-code text-label-code text-on-surface font-bold mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="local_shipping">local_shipping</span>
+              B 9241 TXZ
+            </p>
+</div>
+<div class="col-span-2 sm:col-span-1">
+<p class="font-label-md text-label-md text-on-surface-variant">Estimasi Tiba (ETA)</p>
+<p class="font-title-sm text-title-sm text-primary font-bold mt-0.5">
+              Besok Pagi, 09:30 WIB
+            </p>
+</div>
+</div>
+</div>
+<!-- Highlight Banner: Verification Note (Serah Terima Terverifikasi) -->
+<div class="rounded-xl bg-surface-container-high/70 border border-primary/30 p-space-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-container/20 border border-primary/30 flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined" data-icon="key">key</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm font-bold text-on-surface">Protokol Keamanan Serah Terima Kargo</span>
+<span class="px-2 py-0.5 text-[10px] uppercase font-bold rounded bg-primary-container text-on-primary-fixed">Wajib Otentikasi</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Status <span class="text-on-surface font-semibold">Terkirim</span> hanya akan aktif setelah penerima memasukkan 10 karakter kode konfirmasi rahasia kepada kurir saat serah terima fisik barang.
+            </p>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-2 bg-surface-container-lowest px-3.5 py-2 rounded-xl border border-outline-variant/40">
+<span class="font-label-md text-label-md text-on-surface-variant">Slot Kode Resi:</span>
+<span class="font-label-code text-label-code text-secondary tracking-widest">•••• - •••• - ••</span>
+</div>
+</div>
+</section>
+<!-- Two-Column Main Operational Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Java Corridor Map & Route Telemetry (7 Columns) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Interactive High-Fidelity Map Panel -->
+<div class="relative bg-surface-container-low border border-outline-variant/40 rounded-2xl overflow-hidden shadow-lg h-[540px] flex flex-col">
+<!-- Map Header Tooling -->
+<div class="absolute top-space-md left-space-md right-space-md z-20 flex items-center justify-between pointer-events-none">
+<!-- Corridor Tag -->
+<div class="pointer-events-auto bg-surface-container-lowest/90 backdrop-blur-md border border-outline-variant/40 px-3.5 py-2 rounded-xl flex items-center gap-2 shadow-md">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="hub">hub</span>
+<div>
+<p class="font-label-md text-label-md font-bold text-on-surface">Koridor Pantura — Trans-Jawa</p>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Semarang Central → Tuban Hub → Surabaya DC</p>
+</div>
+</div>
+<!-- Map Layer & Center Controls -->
+<div class="pointer-events-auto flex items-center gap-1.5 bg-surface-container-lowest/90 backdrop-blur-md border border-outline-variant/40 p-1 rounded-xl shadow-md">
+<button class="p-2 hover:bg-surface-container-high rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" title="Pusatkan Rute">
+<span class="material-symbols-outlined text-[18px]" data-icon="center_focus_strong">center_focus_strong</span>
+</button>
+<button class="p-2 hover:bg-surface-container-high rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" title="Filter Lapisan Telemetri">
+<span class="material-symbols-outlined text-[18px]" data-icon="layers">layers</span>
+</button>
+<div class="h-4 w-[1px] bg-outline-variant/40 mx-0.5"></div>
+<button class="p-2 hover:bg-surface-container-high rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" title="Perbesar">
+<span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
+</button>
+<button class="p-2 hover:bg-surface-container-high rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" title="Perkecil">
+<span class="material-symbols-outlined text-[18px]" data-icon="remove">remove</span>
+</button>
+</div>
+</div>
+<!-- Stylized Dark Logistics Map Canvas Rendering -->
+<div class="relative w-full h-full bg-[#070d1f] overflow-hidden flex items-center justify-center select-none" data-location="Semarang to Surabaya, Java Indonesia" style="">
+<!-- Map Grid & Geographic Coastline Visual Gradients -->
+<div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(#3c4947 1px, transparent 1px); background-size: 24px 24px;"></div>
+<!-- Subtle Java Sea Coastline Graphic Contour -->
+<div class="absolute inset-0 pointer-events-none opacity-30">
+<svg class="w-full h-full preserve-3d" fill="none" viewbox="0 0 1000 600">
+<!-- Coastline boundary (North Java Shoreline representation) -->
+<path d="M 0,220 Q 250,210 400,240 T 700,280 T 1000,310 L 1000,0 L 0,0 Z" fill="#0c1324" opacity="0.8"></path>
+<path d="M 0,220 Q 250,210 400,240 T 700,280 T 1000,310" stroke="#1e293b" stroke-dasharray="4 4" stroke-width="2"></path>
+<!-- Secondary Topography Road Arteries -->
+<path d="M 120,400 Q 300,380 480,390 T 880,410" stroke="#191f31" stroke-width="1.5"></path>
+<path d="M 280,180 L 320,550" stroke="#191f31" stroke-dasharray="2 4" stroke-width="1"></path>
+<path d="M 640,220 L 610,550" stroke="#191f31" stroke-dasharray="2 4" stroke-width="1"></path>
+</svg>
+</div>
+<!-- SVG Route Topology Line & Live Progress Path -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" viewbox="0 0 1000 600">
+<defs>
+<lineargradient id="routeGradient" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#14b8a6" stop-opacity="0.9"></stop>
+<stop offset="68%" stop-color="#4fdbc8" stop-opacity="1"></stop>
+<stop offset="69%" stop-color="#3c4947" stop-opacity="0.6"></stop>
+<stop offset="100%" stop-color="#23293c" stop-opacity="0.4"></stop>
+</lineargradient>
+<filter height="140%" id="tealGlow" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="4"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+</defs>
+<!-- Planned Complete Path (Semarang Hub [180, 270] -> Tuban [550, 310] -> Lamongan [720, 350] -> Surabaya [860, 380]) -->
+<path d="M 180,270 C 320,250 420,300 550,310 S 740,360 860,380" fill="none" stroke="#1e293b" stroke-linecap="round" stroke-width="6"></path>
+<!-- Traversed Route Path (Active Glowing Segment: Semarang to Tuban Posisi Sekarang) -->
+<path d="M 180,270 C 320,250 420,300 550,310" fill="none" filter="url(#tealGlow)" stroke="url(#routeGradient)" stroke-linecap="round" stroke-width="5"></path>
+<!-- Remaining Trajectory (Dashed) -->
+<path d="M 550,310 C 640,320 740,360 860,380" fill="none" opacity="0.6" stroke="#38bdf8" stroke-dasharray="6 8" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<!-- Map Markers & Waypoints -->
+<!-- 1. Origin Node: Semarang Hub (Completed) -->
+<div class="absolute left-[18%] top-[45%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center pointer-events-auto">
+<div class="w-8 h-8 rounded-full bg-surface-container-high border-2 border-primary flex items-center justify-center text-primary shadow-lg">
+<span class="material-symbols-outlined text-[16px]" data-icon="warehouse">warehouse</span>
+</div>
+<div class="mt-1 bg-surface-container-lowest/90 px-2 py-0.5 rounded border border-outline-variant/30 text-center">
+<p class="font-label-md text-[10px] font-bold text-on-surface">Semarang Central</p>
+<p class="text-[9px] text-primary">Asal (19 Okt, 08:30)</p>
+</div>
+</div>
+<!-- 2. Intermediate Waypoint: Transit Hub Tuban -->
+<div class="absolute left-[55%] top-[51.5%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-10 pointer-events-auto">
+<!-- Pulsing Live Fleet Radar Ping -->
+<div class="relative flex items-center justify-center">
+<div class="w-14 h-14 rounded-full bg-primary/20 animate-ping absolute"></div>
+<div class="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center relative border border-primary">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary-fixed flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[14px]" data-icon="local_shipping">local_shipping</span>
+</div>
+</div>
+</div>
+<!-- Live Fleet Tooltip Overlay -->
+<div class="mt-2 bg-surface-container-high border border-primary/50 shadow-2xl px-3 py-1.5 rounded-xl text-center backdrop-blur-md">
+<div class="flex items-center gap-1.5 justify-center">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-code text-[11px] text-primary font-bold">B 9241 TXZ</span>
+</div>
+<p class="font-title-sm text-[11px] text-on-surface font-semibold mt-0.5">Wilayah Tuban, Jawa Timur</p>
+<p class="text-[10px] text-on-surface-variant">Kecepatan: 68 km/jam • Jalur Pantura</p>
+</div>
+</div>
+<!-- 3. Destination Node: Surabaya DC (Tujuan) -->
+<div class="absolute left-[86%] top-[63%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center pointer-events-auto">
+<div class="w-8 h-8 rounded-full bg-surface-container-high border-2 border-outline-variant flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]" data-icon="domain">domain</span>
+</div>
+<div class="mt-1 bg-surface-container-lowest/90 px-2 py-0.5 rounded border border-outline-variant/30 text-center">
+<p class="font-label-md text-[10px] font-bold text-on-surface">Surabaya DC</p>
+<p class="text-[9px] text-on-surface-variant">Tujuan Akhir</p>
+</div>
+</div>
+</div>
+<!-- Bottom Map HUD Telemetry Bar -->
+<div class="absolute bottom-space-md left-space-md right-space-md z-20 pointer-events-none">
+<div class="pointer-events-auto grid grid-cols-3 gap-space-sm bg-surface-container-lowest/95 backdrop-blur-md border border-outline-variant/40 p-space-sm rounded-xl shadow-xl">
+<!-- Telemetry 1: Progress Distance -->
+<div class="px-2 py-1 flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]" data-icon="linear_scale">linear_scale</span>
+</div>
+<div class="truncate">
+<p class="font-label-md text-[11px] text-on-surface-variant">Jarak Ditempuh</p>
+<p class="font-title-sm text-title-sm font-bold text-on-surface">215 km <span class="text-on-surface-variant font-normal text-xs">/ 318 km</span></p>
+</div>
+</div>
+<!-- Telemetry 2: Fleet Speed & ETA -->
+<div class="px-2 py-1 flex items-center gap-2.5 border-x border-outline-variant/30">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[18px]" data-icon="speed">speed</span>
+</div>
+<div class="truncate">
+<p class="font-label-md text-[11px] text-on-surface-variant">Laju &amp; Estimasi</p>
+<p class="font-title-sm text-title-sm font-bold text-on-surface">68 km/j • <span class="text-primary">Besok 09:30</span></p>
+</div>
+</div>
+<!-- Telemetry 3: Road & Corridor Condition -->
+<div class="px-2 py-1 flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[18px]" data-icon="cloud_queue">cloud_queue</span>
+</div>
+<div class="truncate">
+<p class="font-label-md text-[11px] text-on-surface-variant">Kondisi Koridor</p>
+<p class="font-title-sm text-title-sm font-bold text-on-surface flex items-center gap-1">
+<span>Cerah</span> • <span class="text-secondary font-normal text-xs">Lancar</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Telemetry Details Subcard -->
+<div class="bg-surface-container-low border border-outline-variant/40 rounded-2xl p-space-md flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-3">
+<div class="p-2.5 rounded-xl bg-surface-container-high text-primary">
+<span class="material-symbols-outlined" data-icon="lock_clock">lock_clock</span>
+</div>
+<div>
+<p class="font-title-sm text-title-sm font-bold text-on-surface">Sinkronisasi Rute Kargo Trans-Jawa</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Telemetri sensor kabin dan segel digital diperbarui setiap 90 detik secara otomatis.</p>
+</div>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant/40 text-on-surface font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-[16px]" data-icon="refresh">refresh</span>
+            Perbarui Telemetri
+          </button>
+</div>
+</div>
+<!-- RIGHT COLUMN: Vertical Step Timeline & Action Hub (5 Columns) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Timeline Card Container -->
+<div class="bg-surface-container-low border border-outline-variant/40 rounded-2xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-space-sm mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="schedule">schedule</span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Aktivitas Perjalanan</h2>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">6 Tahap Verifikasi</span>
+</div>
+<!-- Vertical Timeline Steps (Strict 6 Stages) -->
+<div class="relative pl-6 space-y-7 before:content-[''] before:absolute before:left-[11px] before:top-2 before:bottom-3 before:w-[2px] before:bg-outline-variant/40">
+<!-- STEP 1: Paket Terdaftar (Completed) -->
+<div class="relative group">
+<div class="absolute -left-[31px] top-0 w-6 h-6 rounded-full bg-surface-container-highest border-2 border-primary text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] font-bold" data-icon="check">check</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline justify-between gap-2">
+<p class="font-title-sm text-title-sm font-bold text-on-surface">Paket Terdaftar</p>
+<span class="font-label-md text-[11px] text-on-surface-variant font-medium">19 Okt 2026, 08:30 WIB</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Manifest kargo dibuat secara elektronik di Semarang Hub. Nomor registrasi dan segel logistik disahkan.
+                </p>
+</div>
+</div>
+<!-- STEP 2: Dijemput (Completed) -->
+<div class="relative group">
+<div class="absolute -left-[31px] top-0 w-6 h-6 rounded-full bg-surface-container-highest border-2 border-primary text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] font-bold" data-icon="check">check</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline justify-between gap-2">
+<p class="font-title-sm text-title-sm font-bold text-on-surface">Dijemput</p>
+<span class="font-label-md text-[11px] text-on-surface-variant font-medium">19 Okt 2026, 14:15 WIB</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Muatan diterima oleh tim armada penjemputan logistik. Lokasi operasional: Semarang.
+                </p>
+</div>
+</div>
+<!-- STEP 3: Di Gudang (Completed) -->
+<div class="relative group">
+<div class="absolute -left-[31px] top-0 w-6 h-6 rounded-full bg-surface-container-highest border-2 border-primary text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] font-bold" data-icon="check">check</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline justify-between gap-2">
+<p class="font-title-sm text-title-sm font-bold text-on-surface">Di Gudang Sortir</p>
+<span class="font-label-md text-[11px] text-on-surface-variant font-medium">19 Okt 2026, 21:00 WIB</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Selesai pemilahan zonasi rute Jawa Timur pada Sorting Hub Semarang Central.
+                </p>
+</div>
+</div>
+<!-- STEP 4: Dalam Perjalanan (CURRENT ACTIVE STATE) -->
+<div class="relative">
+<div class="absolute -left-[34px] -top-1 w-8 h-8 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center shadow-lg shadow-primary-container/30 ring-4 ring-surface-container-low animate-bounce">
+<span class="material-symbols-outlined text-[18px]" data-icon="local_shipping">local_shipping</span>
+</div>
+<div class="bg-surface-container-high/80 border border-primary/40 rounded-xl p-space-sm pl-3 shadow-md">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<p class="font-title-sm text-title-sm font-bold text-primary">Dalam Perjalanan</p>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-extrabold bg-primary/20 text-primary uppercase tracking-wide">
+                      Aktif Sekarang
+                    </span>
+</div>
+<span class="font-label-md text-[11px] text-primary font-semibold">Real-Time</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-1.5">
+                  Armada kargo melintasi rute darat Semarang menuju Surabaya via Koridor Pantura. Posisi mutakhir terpantau di transit Tuban.
+                </p>
+<div class="mt-2.5 pt-2 border-t border-outline-variant/30 flex items-center justify-between text-on-surface-variant text-[11px] font-label-md">
+<span>Armada: B 9241 TXZ</span>
+<span>Sensor Segel: Utuh</span>
+</div>
+</div>
+</div>
+<!-- STEP 5: Sedang Diantar (Upcoming / Pending) -->
+<div class="relative group opacity-60">
+<div class="absolute -left-[31px] top-0 w-6 h-6 rounded-full bg-surface-container border-2 border-outline-variant text-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]" data-icon="pending">pending</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline justify-between gap-2">
+<p class="font-title-sm text-title-sm font-semibold text-on-surface">Sedang Diantar</p>
+<span class="font-label-md text-[11px] text-on-surface-variant">Menunggu Rute Tiba</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Kurir kargo bersiap menuju titik serah terima logistik wilayah Surabaya setelah proses docking selesai.
+                </p>
+</div>
+</div>
+<!-- STEP 6: Terkirim (Final Protected Step - Otentikasi Kode) -->
+<div class="relative group opacity-75">
+<div class="absolute -left-[31px] top-0 w-6 h-6 rounded-full bg-surface-container-lowest border-2 border-secondary text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]" data-icon="lock">lock</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-1.5">
+<p class="font-title-sm text-title-sm font-semibold text-on-surface">Terkirim</p>
+<span class="material-symbols-outlined text-[15px] text-secondary" data-icon="verified_user">verified_user</span>
+</div>
+<span class="font-label-md text-[11px] text-secondary font-semibold">Proteksi Sandi</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Serah terima resmi paket kargo di wilayah tujuan Surabaya.
+                </p>
+<!-- Specialized Highlight Badge -->
+<div class="mt-2 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-highest border border-secondary/30 text-secondary text-xs font-label-md">
+<span class="material-symbols-outlined text-[16px]" data-icon="dialpad">dialpad</span>
+<span>Menunggu Kode Konfirmasi 10 Karakter Penerima</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Card Hub -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<!-- Action: Share Public Link -->
+<div class="bg-surface-container-low border border-outline-variant/40 rounded-2xl p-space-md flex flex-col justify-between hover:border-outline-variant/80 transition-all">
+<div>
+<div class="w-9 h-9 rounded-xl bg-surface-container-high text-primary flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[20px]" data-icon="share">share</span>
+</div>
+<p class="font-title-sm text-title-sm font-bold text-on-surface">Bagikan Tautan Pelacakan</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-1">
+                Tautan publik aman. Data pribadi, nama, dan alamat tetap terlindungi penuh sesuai protokol.
+              </p>
+</div>
+<button class="mt-4 w-full py-2 px-3 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md border border-outline-variant/40 transition-colors flex items-center justify-center gap-1.5 active:scale-[0.99]">
+<span class="material-symbols-outlined text-[16px]" data-icon="content_copy">content_copy</span>
+              Salin Tautan Aman
+            </button>
+</div>
+<!-- Action: Dispatcher Support -->
+<div class="bg-surface-container-low border border-outline-variant/40 rounded-2xl p-space-md flex flex-col justify-between hover:border-outline-variant/80 transition-all">
+<div>
+<div class="w-9 h-9 rounded-xl bg-surface-container-high text-secondary flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[20px]" data-icon="support_agent">support_agent</span>
+</div>
+<p class="font-title-sm text-title-sm font-bold text-on-surface">Bantuan Dispatcher</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-1">
+                Butuh koordinasi jadwal bongkar muat atau eskalasi jalur darat? Hubungi pengawas logistik.
+              </p>
+</div>
+<button class="mt-4 w-full py-2 px-3 rounded-xl bg-primary-container hover:bg-primary text-on-primary-fixed font-label-md text-label-md font-bold transition-all flex items-center justify-center gap-1.5 active:scale-[0.99]">
+<span class="material-symbols-outlined text-[16px]" data-icon="chat">chat</span>
+              Hubungi Dispatcher
+            </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 mt-space-xl">
+<div class="w-full px-margin py-space-xl max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-space-md">
+<div class="flex flex-col sm:flex-row items-center gap-space-md text-center sm:text-left">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="local_shipping">local_shipping</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">LogiTrack</span>
+</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm">
+          © 2025 LogiTrack Indonesia. Jaringan Ekspedisi Kargo Darat Terpercaya. Hak Cipta Dilindungi.
+        </p>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-space-md">
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface transition-colors" href="#">Syarat &amp; Ketentuan</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface transition-colors" href="#">Kebijakan Privasi</a>
+<a class="text-primary font-body-sm text-body-sm hover:underline transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified_user">verified_user</span>
+          Protokol Verifikasi Kode
+        </a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface transition-colors" href="#">Jaringan Armada Nusantara</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface transition-colors" href="#">Pusat Bantuan 24/7</a>
+</div>
+</div>
+</footer>
+</body></html>

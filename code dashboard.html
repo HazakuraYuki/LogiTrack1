@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LogiTrack - Dashboard Pengirim (Sender Portal)</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-highest": "#2e3447",
+            "surface-container-low": "#151b2d",
+            "on-secondary-fixed": "#001e2c",
+            "on-surface-variant": "#bbcac6",
+            "on-secondary-fixed-variant": "#004c69",
+            "secondary-container": "#00a6e0",
+            "surface-container": "#191f31",
+            "on-primary-container": "#00423b",
+            "on-tertiary-container": "#543300",
+            "on-primary-fixed": "#00201c",
+            "surface-tint": "#4fdbc8",
+            "inverse-surface": "#dce1fb",
+            "secondary-fixed": "#c4e7ff",
+            "primary": "#4fdbc8",
+            "error-container": "#93000a",
+            "on-error": "#690005",
+            "on-tertiary-fixed-variant": "#653e00",
+            "outline-variant": "#3c4947",
+            "on-primary-fixed-variant": "#005048",
+            "secondary-fixed-dim": "#7bd0ff",
+            "background": "#0c1324",
+            "primary-fixed-dim": "#4fdbc8",
+            "primary-fixed": "#71f8e4",
+            "surface-bright": "#33394c",
+            "inverse-on-surface": "#2a3043",
+            "error": "#ffb4ab",
+            "inverse-primary": "#006b5f",
+            "on-secondary-container": "#00374d",
+            "on-tertiary-fixed": "#2a1700",
+            "outline": "#859490",
+            "surface-variant": "#2e3447",
+            "on-background": "#dce1fb",
+            "primary-container": "#14b8a6",
+            "surface-container-high": "#23293c",
+            "on-error-container": "#ffdad6",
+            "tertiary-fixed-dim": "#ffb95f",
+            "on-primary": "#003731",
+            "tertiary": "#ffb95f",
+            "on-tertiary": "#472a00",
+            "tertiary-fixed": "#ffddb8",
+            "tertiary-container": "#e49200",
+            "secondary": "#7bd0ff",
+            "on-secondary": "#00354a",
+            "on-surface": "#dce1fb",
+            "surface-container-lowest": "#070d1f",
+            "surface-dim": "#0c1324",
+            "surface": "#0c1324"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1.5rem",
+            "space-xl": "2rem",
+            "space-lg": "1.5rem",
+            "margin-mobile": "1rem",
+            "space-md": "1rem",
+            "margin": "2rem",
+            "gutter-mobile": "1rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "label-code": ["Plus Jakarta Sans"],
+            "title-md": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "title-sm": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "label-code": ["13px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "700" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "800" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "title-sm": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Anchor (Shared Component: TopNavBar) -->
+<header class="bg-surface-container-lowest border-b border-outline-variant/30 sticky top-0 z-50">
+<div class="sticky top-0 z-50 flex items-center justify-between w-full px-margin py-space-sm max-w-[1440px] mx-auto">
+<!-- Left: Logo & Navigation Links -->
+<div class="flex items-center gap-space-lg">
+<a class="flex items-center gap-space-xs group" href="#">
+<span class="font-headline-md text-headline-md font-extrabold text-primary tracking-tight">LogiTrack</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse inline-block"></span>
+</a>
+<nav class="hidden md:flex items-center gap-space-md">
+<a class="text-on-surface-variant hover:text-on-surface pb-1 font-title-sm text-title-sm transition-colors" href="#">Pelacakan</a>
+<a class="text-on-surface-variant hover:text-on-surface pb-1 font-title-sm text-title-sm transition-colors" href="#">Kirim Kargo</a>
+<a class="text-on-surface-variant hover:text-on-surface pb-1 font-title-sm text-title-sm transition-colors" href="#">Rute &amp; Tarif</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-title-sm text-title-sm" href="#">Serah Terima</a>
+<a class="text-on-surface-variant hover:text-on-surface pb-1 font-title-sm text-title-sm transition-colors" href="#">LogiPoin</a>
+</nav>
+</div>
+<!-- Right: Search Bar, Actions & User Profile -->
+<div class="flex items-center gap-space-md">
+<!-- Quick Nav Search -->
+<div class="relative hidden lg:block w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full bg-surface-container-low border border-outline-variant/50 rounded-xl pl-9 pr-3 py-1.5 text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all" placeholder="Lacak cepat nomor resi..." type="text"/>
+</div>
+<!-- Trailing Icon Actions -->
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<button aria-label="Notifikasi" class="p-2 rounded-xl hover:bg-surface-container-high hover:text-primary transition-all relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary"></span>
+</button>
+<button aria-label="Status Terverifikasi" class="p-2 rounded-xl hover:bg-surface-container-high hover:text-primary transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</button>
+</div>
+<!-- User Profile Component: PT Sentosa Kargo -->
+<div class="h-6 w-px bg-outline-variant/30"></div>
+<div class="flex items-center gap-space-sm pl-space-xs">
+<div class="w-8 h-8 rounded-xl bg-surface-container-highest flex items-center justify-center border border-outline-variant/40 text-primary font-bold font-title-sm">
+            SK
+          </div>
+<div class="hidden sm:flex flex-col text-left">
+<div class="flex items-center gap-1.5">
+<span class="font-title-sm text-title-sm text-on-surface">PT Sentosa Kargo</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-label-code bg-primary-container/15 text-primary border border-primary-container/30">SENDER</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Kargo Darat Reguler</span>
+</div>
+<button aria-label="Pengaturan Profil" class="p-1 rounded text-outline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Canvas Container -->
+<main class="w-full max-w-[1440px] mx-auto px-margin py-space-lg flex-1 space-y-space-lg">
+<!-- Welcome & Action Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md border-b border-outline-variant/20 pb-space-lg">
+<div class="space-y-1">
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">Dashboard Pengirim (Sender Portal)</h1>
+<span class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low border border-outline-variant/40 text-secondary text-label-md">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+            Node Jakarta Pusat Online
+          </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Kelola manifest kargo darat, pantau status verifikasi serah terima, dan akumulasi reward pengiriman
+        </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-space-md py-2.5 rounded-xl border border-outline-variant text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+          Manifest Masal
+        </button>
+<button class="px-space-md py-2.5 rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-surface-tint active:scale-[0.99] transition-all flex items-center gap-2 shadow-[0_0_16px_-2px_rgba(20,184,166,0.35)]">
+<span class="material-symbols-outlined text-[20px]">add</span>
+          Kirim Kargo Baru
+        </button>
+</div>
+</div>
+<!-- Top Summary Metric Cards (3 Primary Cards) -->
+<section aria-label="Metrik Utama Pengirim" class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Card 1: Saldo LogiPoin (Strict Constraint: No Tiers) -->
+<div class="bg-surface-container-low border border-outline-variant/40 rounded-xl p-space-md relative overflow-hidden flex flex-col justify-between group hover:border-primary-container/40 transition-all">
+<div class="absolute -right-6 -top-6 w-24 h-24 bg-primary-container/10 rounded-full blur-xl pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-title-sm text-title-sm text-on-surface-variant">Saldo LogiPoin</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary border border-outline-variant/30">
+<span class="material-symbols-outlined text-[18px]">toll</span>
+</div>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">1.420</span>
+<span class="font-label-lg text-label-lg text-primary font-semibold">Poin</span>
+</div>
+<div class="text-body-sm text-outline mb-space-md">
+            Ekuivalen <span class="text-on-surface font-semibold">Rp 142.000</span> potongan ongkir kargo
+          </div>
+</div>
+<div class="pt-space-sm border-t border-outline-variant/20 space-y-2">
+<div class="flex items-start gap-2 bg-surface-container-lowest/80 p-2.5 rounded-lg border border-outline-variant/30">
+<span class="material-symbols-outlined text-primary text-[16px] mt-0.5">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+              Poin dikreditkan setelah penerima memasukkan kode
+            </p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-surface-tint pt-1 transition-colors" href="#">
+            Riwayat Perolehan Poin
+            <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 2: Paket Terkirim Terverifikasi -->
+<div class="bg-surface-container-low border border-outline-variant/40 rounded-xl p-space-md relative overflow-hidden flex flex-col justify-between group hover:border-primary-container/40 transition-all">
+<div class="absolute -right-6 -top-6 w-24 h-24 bg-secondary/10 rounded-full blur-xl pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-title-sm text-title-sm text-on-surface-variant">Paket terkirim terverifikasi</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary border border-outline-variant/30">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">48</span>
+<span class="font-label-lg text-label-lg text-secondary font-semibold">Muatan</span>
+</div>
+<div class="flex items-center gap-1.5 mb-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+              100% dengan validasi kode rahasia 10 karakter
+            </span>
+</div>
+</div>
+<div class="pt-space-sm border-t border-outline-variant/20 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-outline">+12 bulan ini tanpa kendala</span>
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">security</span>
+            Protokol Aktif
+          </span>
+</div>
+</div>
+<!-- Card 3: Paket Aktif -->
+<div class="bg-surface-container-low border border-outline-variant/40 rounded-xl p-space-md relative overflow-hidden flex flex-col justify-between group hover:border-primary-container/40 transition-all">
+<div class="absolute -right-6 -top-6 w-24 h-24 bg-surface-container-highest/20 rounded-full blur-xl pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-title-sm text-title-sm text-on-surface-variant">Paket aktif</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary border border-outline-variant/30">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+</div>
+</div>
+<div class="flex items-baseline gap-2 mb-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">6</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant font-semibold">Pengiriman</span>
+</div>
+<!-- Status Breakdown Pills -->
+<div class="flex flex-wrap gap-1.5 mb-space-sm">
+<span class="px-2 py-0.5 rounded text-[11px] font-medium bg-surface-container-highest text-secondary border border-outline-variant/40">
+              1 Paket Terdaftar
+            </span>
+<span class="px-2 py-0.5 rounded text-[11px] font-medium bg-secondary-container/20 text-secondary-fixed border border-secondary-container/40">
+              4 Dalam Perjalanan
+            </span>
+<span class="px-2 py-0.5 rounded text-[11px] font-medium bg-tertiary-container/20 text-tertiary-fixed border border-tertiary-container/40">
+              1 Sedang Diantar
+            </span>
+</div>
+</div>
+<div class="pt-space-sm border-t border-outline-variant/20 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-body-sm text-body-sm text-on-surface">GNSS Trans-Jawa Online</span>
+</div>
+<span class="font-label-code text-label-code text-primary text-[11px]">TELEMETRI AKTIF</span>
+</div>
+</div>
+</section>
+<!-- Logistics Security Banner (Serah Terima Protocol) -->
+<div class="bg-surface-container-low border border-primary-container/30 rounded-xl p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-md relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary-container"></div>
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-primary-container/10 border border-primary-container/30 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Protokol Keamanan Serah Terima</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-code bg-surface-container-highest text-primary">SOP RESMI</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-4xl">
+            Penerima wajib memvalidasi 10 karakter kode rahasia untuk menyelesaikan status pengiriman dan mengkreditkan LogiPoin ke akun Anda. Kode ini tertera aman pada Surat Jalan Digital dan dikonfirmasi langsung oleh kurir armada di titik akhir.
+          </p>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-2">
+<div class="px-3 py-1.5 rounded-lg bg-surface-container-lowest border border-outline-variant/40 flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[16px]">qr_code_scanner</span>
+<span class="font-label-code text-label-code text-primary tracking-wider">KODE: ****-***-**</span>
+</div>
+</div>
+</div>
+<!-- Main Section: Table "Pengiriman Terbaru" -->
+<section class="bg-surface-container-low border border-outline-variant/40 rounded-xl overflow-hidden shadow-2xl space-y-space-md p-space-md">
+<!-- Table Header Bar with Filters and Search -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md border-b border-outline-variant/20 pb-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Pengiriman Terbaru</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Daftar resi manifest aktif dan riwayat serah terima armada darat</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Search Bar -->
+<div class="relative w-full sm:w-72">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded-xl pl-9 pr-3 py-2 text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all" placeholder="Cari nomor resi, kota tujuan..." type="text"/>
+</div>
+<!-- Status Pengiriman Dropdown Filter -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-lowest border border-outline-variant/50 rounded-xl pl-3 pr-8 py-2 text-body-sm text-on-surface focus:outline-none focus:border-primary-container transition-all cursor-pointer">
+<option value="">Semua Status Pengiriman</option>
+<option value="terdaftar">Paket Terdaftar</option>
+<option value="transit">Dalam Perjalanan</option>
+<option value="terkirim">Terkirim</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[16px]">expand_more</span>
+</div>
+<!-- Status Pembayaran Dropdown Filter -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-lowest border border-outline-variant/50 rounded-xl pl-3 pr-8 py-2 text-body-sm text-on-surface focus:outline-none focus:border-primary-container transition-all cursor-pointer">
+<option value="">Semua Status Pembayaran</option>
+<option value="lunas">Lunas</option>
+<option value="belum_bayar">Belum Bayar</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[16px]">expand_more</span>
+</div>
+<button class="p-2 rounded-xl border border-outline-variant/50 bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant transition-colors" title="Ekspor Data">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+</div>
+<!-- Responsive Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-outline-variant/30 text-on-surface-variant font-label-md text-label-md">
+<th class="py-3 px-4 font-semibold">Nomor Resi (LGT-Format)</th>
+<th class="py-3 px-4 font-semibold">Rute Perjalanan</th>
+<th class="py-3 px-4 font-semibold">Status Pengiriman</th>
+<th class="py-3 px-4 font-semibold">Status Pembayaran</th>
+<th class="py-3 px-4 font-semibold">Estimasi Tiba / Selesai</th>
+<th class="py-3 px-4 font-semibold text-right">Aksi</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20 font-body-sm text-body-sm">
+<!-- Row 1 Required -->
+<tr class="hover:bg-surface-container-high/40 transition-colors group">
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-cyan-400"></div>
+<div>
+<span class="font-label-code text-label-code text-primary tracking-wider">LGT-20261019-1001</span>
+<div class="text-[11px] text-outline">Kargo Truk CDE • 450 Kg</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 font-title-sm text-title-sm text-on-surface">
+<div class="flex items-center gap-2">
+<span>Jakarta</span>
+<span class="material-symbols-outlined text-outline text-[16px]">arrow_forward</span>
+<span>Bandung</span>
+</div>
+<div class="text-[11px] text-outline font-normal">Hub Cakung → Hub Gedebage</div>
+</td>
+<td class="py-4 px-4">
+<!-- Badge style neutral/cyan -->
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[12px] font-semibold bg-cyan-500/10 text-cyan-300 border border-cyan-500/30">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                  Paket Terdaftar
+                </span>
+</td>
+<td class="py-4 px-4">
+<!-- Badge style warning/amber/yellow -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[12px] font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/30">
+<span class="material-symbols-outlined text-[14px]">pending</span>
+                  Belum Bayar
+                </span>
+</td>
+<td class="py-4 px-4 text-on-surface-variant">
+<div class="font-medium text-on-surface">20 Okt 2026, 14:00 WIB</div>
+<div class="text-[11px] text-outline">Menunggu instruksi muat</div>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="inline-flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-tertiary-container/30 border border-tertiary-container/50 text-tertiary-fixed font-label-md text-label-md hover:bg-tertiary-container/50 transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">payments</span>
+                    Bayar Sekarang
+                  </button>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container-lowest border border-outline-variant/40 text-on-surface hover:text-primary hover:border-primary-container transition-colors font-label-md text-label-md">
+                    Detail
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 2 Required -->
+<tr class="hover:bg-surface-container-high/40 transition-colors group">
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></div>
+<div>
+<span class="font-label-code text-label-code text-primary tracking-wider">LGT-20261019-2045</span>
+<div class="text-[11px] text-outline">Kargo Fuso Berat • 4.200 Kg</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 font-title-sm text-title-sm text-on-surface">
+<div class="flex items-center gap-2">
+<span>Semarang</span>
+<span class="material-symbols-outlined text-outline text-[16px]">arrow_forward</span>
+<span>Surabaya</span>
+</div>
+<div class="text-[11px] text-outline font-normal">Tol Trans-Jawa KM 418 (Kendal)</div>
+</td>
+<td class="py-4 px-4">
+<!-- Badge style teal/blue-green glow -->
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[12px] font-semibold bg-primary-container/20 text-primary border border-primary-container/50 shadow-[0_0_12px_-2px_rgba(20,184,166,0.3)]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+                  Dalam Perjalanan
+                </span>
+</td>
+<td class="py-4 px-4">
+<!-- Badge style green/emerald -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[12px] font-semibold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                  Lunas
+                </span>
+</td>
+<td class="py-4 px-4 text-on-surface-variant">
+<div class="font-medium text-on-surface">21 Okt 2026, 09:30 WIB</div>
+<div class="text-[11px] text-primary">Sesuai jadwal lintasan</div>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="inline-flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high border border-primary-container/40 text-primary font-label-md text-label-md hover:bg-primary-container hover:text-on-primary transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                    Lacak Armada
+                  </button>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container-lowest border border-outline-variant/40 text-on-surface hover:text-primary hover:border-primary-container transition-colors font-label-md text-label-md">
+                    Detail
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 3 Required -->
+<tr class="hover:bg-surface-container-high/40 transition-colors group">
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+<div>
+<span class="font-label-code text-label-code text-primary tracking-wider">LGT-20261019-3312</span>
+<div class="text-[11px] text-outline">Kargo Inter-Island • 1.800 Kg</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 font-title-sm text-title-sm text-on-surface">
+<div class="flex items-center gap-2">
+<span>Jakarta</span>
+<span class="material-symbols-outlined text-outline text-[16px]">arrow_forward</span>
+<span>Denpasar</span>
+</div>
+<div class="text-[11px] text-outline font-normal">Hub Sanur • Selesai Diterima</div>
+</td>
+<td class="py-4 px-4">
+<!-- Badge style verified green with checkmark icon -->
+<div class="space-y-1">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[12px] font-semibold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+<span class="material-symbols-outlined text-[14px]">check</span>
+                    Terkirim
+                  </span>
+<!-- Specific note/tag required -->
+<div class="flex items-center gap-1 text-[11px] font-medium text-primary">
+<span class="material-symbols-outlined text-[12px]">security_update_good</span>
+<span>Kode 10 Karakter Terverifikasi (+250 LogiPoin Cair)</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<!-- Badge style green/emerald -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[12px] font-semibold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                  Lunas
+                </span>
+</td>
+<td class="py-4 px-4 text-on-surface-variant">
+<div class="font-medium text-emerald-400">19 Okt 2026, 17:15 WIB</div>
+<div class="text-[11px] text-outline">Penerima: I Made Artha (Staff Gudang)</div>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="inline-flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-highest border border-outline-variant/60 text-on-surface font-label-md text-label-md hover:border-primary hover:text-primary transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">download</span>
+                    Unduh Bukti Serah Terima
+                  </button>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container-lowest border border-outline-variant/40 text-on-surface hover:text-primary hover:border-primary-container transition-colors font-label-md text-label-md">
+                    Detail
+                  </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination Controls -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-sm border-t border-outline-variant/20 text-on-surface-variant">
+<span class="text-body-sm">Menampilkan 3 dari 54 manifest muatan pengirim</span>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg border border-outline-variant/30 text-outline hover:text-on-surface disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary-container text-on-primary font-bold text-body-sm flex items-center justify-center">1</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-body-sm flex items-center justify-center transition-colors">2</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-body-sm flex items-center justify-center transition-colors">3</button>
+<span class="px-1 text-outline">...</span>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-high text-body-sm flex items-center justify-center transition-colors">18</button>
+<button class="p-1.5 rounded-lg border border-outline-variant/30 text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Additional Quick Overview: Fleet Operation Status & Live Hub Traffic -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Logistics Feature Badge: "Serah Terima Terverifikasi" showcase container -->
+<div class="bg-surface-container-low border border-outline-variant/40 rounded-xl p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-title-md text-title-md text-on-surface">Verifikasi Custody Terakhir</h3>
+<span class="text-[11px] font-label-code text-primary bg-primary-container/10 px-2 py-0.5 rounded border border-primary-container/30">VALID</span>
+</div>
+<!-- Feature Component Specified in Guidance -->
+<div class="p-space-sm rounded-xl bg-primary-container/10 border border-primary-container/30 space-y-2 mb-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Serah Terima Terverifikasi</span>
+</div>
+<span class="text-[11px] text-outline">Hub Sanur Bali</span>
+</div>
+<div class="bg-surface-container-lowest px-3 py-1.5 rounded-lg border border-outline-variant/40 flex items-center justify-between">
+<span class="text-[11px] text-outline uppercase font-semibold">Validasi Monospace</span>
+<span class="font-label-code text-label-code text-primary tracking-widest">KODE: 4A89-91X-JK</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Telah divalidasi silang bersama staf logistik penerima di gerbang serah terima dermaga Ketapang-Gilimanuk.
+          </p>
+</div>
+<div class="pt-space-sm mt-space-sm border-t border-outline-variant/20 flex items-center justify-between text-body-sm">
+<span class="text-outline">Waktu Penyelesaian:</span>
+<span class="text-on-surface font-medium">19 Okt 2026, 17:15</span>
+</div>
+</div>
+<!-- Quick Dispatch Estimator -->
+<div class="bg-surface-container-low border border-outline-variant/40 rounded-xl p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-title-md text-title-md text-on-surface">Kalkulator Cepat Muatan</h3>
+<span class="material-symbols-outlined text-outline text-[18px]">calculate</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs mb-space-sm">
+<div class="p-2 rounded-lg bg-surface-container-lowest border border-outline-variant/30">
+<span class="text-[11px] text-outline block">Asal Kargo</span>
+<span class="font-semibold text-on-surface text-body-sm">Jakarta (DKI)</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-lowest border border-outline-variant/30">
+<span class="text-[11px] text-outline block">Tujuan Kargo</span>
+<span class="font-semibold text-on-surface text-body-sm">Surabaya (Jatim)</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg border border-outline-variant/30 flex items-center justify-between">
+<div>
+<span class="text-[11px] text-outline block">Estimasi Tarif Truk Wingbox</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">Rp 4.850.000</span>
+</div>
+<span class="text-right text-[11px] text-emerald-400 font-semibold bg-emerald-500/10 px-2 py-1 rounded">
+              Hemat 1.000 Poin
+            </span>
+</div>
+</div>
+<div class="pt-space-sm mt-space-sm border-t border-outline-variant/20 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-outline">Lead time: 24-36 Jam</span>
+<a class="font-label-md text-label-md text-primary hover:underline" href="#">Pesan Jadwal Armada →</a>
+</div>
+</div>
+<!-- Hub Transit Conditions -->
+<div class="bg-surface-container-low border border-outline-variant/40 rounded-xl p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-title-md text-title-md text-on-surface">Koridor Darat Utama</h3>
+<span class="material-symbols-outlined text-secondary text-[18px]">alt_route</span>
+</div>
+<ul class="space-y-2 mb-space-sm">
+<li class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest border border-outline-variant/30">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span class="font-medium text-body-sm text-on-surface">Tol Cipali (KM 72-180)</span>
+</div>
+<span class="text-[11px] text-emerald-400 font-semibold">Lancar 80 km/j</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest border border-outline-variant/30">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-amber-400"></span>
+<span class="font-medium text-body-sm text-on-surface">Alas Roban Batang</span>
+</div>
+<span class="text-[11px] text-amber-400 font-semibold">Perbaikan Jalan</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest border border-outline-variant/30">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span class="font-medium text-body-sm text-on-surface">Pelabuhan Ketapang</span>
+</div>
+<span class="text-[11px] text-emerald-400 font-semibold">Antrean Kapal 15 Mnt</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-sm border-t border-outline-variant/20 flex items-center justify-between text-body-sm">
+<span class="text-outline">Pembaruan: 4 mnt lalu</span>
+<span class="font-label-md text-label-md text-secondary">Telemetri Satelit V2</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Global Footer Anchor (Shared Component: Footer) -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/30 mt-auto">
+<div class="w-full px-margin py-space-xl max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-space-md">
+<!-- Left: Logo & Copyright -->
+<div class="flex flex-col items-center md:items-start gap-1">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">LogiTrack</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-center md:text-left">
+          © 2025 LogiTrack Indonesia. Jaringan Ekspedisi Kargo Darat Terpercaya. Hak Cipta Dilindungi.
+        </p>
+</div>
+<!-- Right: Footer Links Required by JSON -->
+<div class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2">
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface transition-colors" href="#">Syarat &amp; Ketentuan</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface transition-colors" href="#">Kebijakan Privasi</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface transition-colors" href="#">Protokol Verifikasi Kode</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface transition-colors" href="#">Jaringan Armada Nusantara</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface transition-colors" href="#">Pusat Bantuan 24/7</a>
+</div>
+</div>
+</footer>
+</body></html>
